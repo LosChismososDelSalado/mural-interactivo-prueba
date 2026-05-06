@@ -30,7 +30,7 @@ const zonaData = {
     'zona-azteca':      { tipo: 'video',   src: 'assets/azteca.webm' },
     'zona-futbolista':  { tipo: 'video',   src: 'assets/futbolista.webm' },
     'zona-doctora':     { tipo: 'video',   src: 'assets/doctora.webm' },
-    'zona-ingeniera':   { tipo: 'video',  src: 'assets/ingeniera.webm' },
+    'zona-ingeniera':   { tipo: 'video',   src: 'assets/ingeniera.webm' },
     'zona-maestra':     { tipo: 'video',   src: 'assets/maestra.webm' },
     'zona-bombera':     { tipo: 'video',   src: 'assets/bombera.webm' },
     'zona-repartidora': { tipo: 'video',   src: 'assets/repartidora.webm' },
