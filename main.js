@@ -59,8 +59,14 @@ grietaVerde.style.opacity      = '0';
 
 // --- AUDIO AMBIENTE ---
 const audioAmbiente = new Audio('assets/ambiente.mp3');
-audioAmbiente.loop   = true;
+audioAmbiente.loop = true;
 audioAmbiente.volume = 0.5;
+
+window.addEventListener('load', () => {
+  audioAmbiente.play().catch(err => {
+    console.log('Autoplay bloqueado:', err);
+  });
+});
 
 // Iniciar al primer clic/toque del usuario (política de autoplay del navegador)
 let ambienteIniciado = false;
