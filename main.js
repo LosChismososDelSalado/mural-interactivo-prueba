@@ -30,9 +30,9 @@ const zonaData = {
     'zona-azteca':      { tipo: 'video',   src: 'assets/azteca.webm' },
     'zona-futbolista':  { tipo: 'video',   src: 'assets/futbolista.webm' },
     'zona-doctora':     { tipo: 'video',   src: 'assets/doctora.webm' },
-    'zona-ingeniera':   { tipo: 'imagen',  src: 'assets/ingeniera.jpg' },
-    'zona-maestra':     { tipo: 'audio',   src: 'assets/maestra.mp3' },
-    'zona-bombera':     { tipo: 'audio',   src: 'assets/bombera.mp3' },
+    'zona-ingeniera':   { tipo: 'video',  src: 'assets/ingeniera.webm' },
+    'zona-maestra':     { tipo: 'video',   src: 'assets/maestra.webm' },
+    'zona-bombera':     { tipo: 'video',   src: 'assets/bombera.webm' },
     'zona-repartidora': { tipo: 'video',   src: 'assets/repartidora.webm' },
     'zona-nosotras':    { tipo: 'video-alpha', src: 'assets/nosotras.webm' },
     'zona-nina':        { tipo: 'nina' },
@@ -279,7 +279,7 @@ let ninaModoActivo = false;
 
 // Elementos que BRILLAN (se mantienen visibles y con glow)
 const elementosBrillantes = [
-    'glow-doctora', 'glow-ingeniera', 'glow-maestra',
+    'glow-doctora', 'glow-ingeniera', 'glow-maestra', 'glow-futbolista',
     'glow-bombera', 'glow-repartidora', 'glow-jugadoras', 'glow-nina'
 ];
 
