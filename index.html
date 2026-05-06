@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural Interactivo - Del Olvido a la Historia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mural-container">
+        <!-- FONDO BASE -->
+        <img src="assets/mural-fondo-base.webp" class="layer">
+        <!-- PÚBLICO -->
+        <img src="assets/p1971-publico-2.png" class="layer wave-layer-2">
+        <img src="assets/p1971-publico-1.png" class="layer wave-layer-1">
+        <!-- ELEMENTOS PASADO -->
+        <img src="assets/p1971-jugadoras.png"      class="layer glow-double" id="glow-jugadoras">
+        <img src="assets/p1971-texto-historia.png"  class="layer" id="glow-historia">
+        <img src="assets/p1971-letrero-azteca.png"  class="layer glow-double" id="glow-azteca">
+        <!-- GRIETAS -->
+        <img src="assets/centro-grieta-negra.png"  class="layer">
+        <img src="assets/centro-grieta-verde.png"  class="layer" id="grieta-verde">
+        <!-- PERSONAJES PRESENTE -->
+        <img src="assets/f2026-bombera.png"         class="layer glow-simple" id="glow-bombera">
+        <img src="assets/f2026-doctora.png"         class="layer glow-simple" id="glow-doctora">
+        <img src="assets/f2026-futbolista.png"      class="layer glow-simple" id="glow-futbolista">
+        <img src="assets/f2026-ingeniera.png"       class="layer glow-simple" id="glow-ingeniera">
+        <img src="assets/f2026-maestra.png"         class="layer glow-simple" id="glow-maestra">
+        <img src="assets/f2026-repartidora.png"     class="layer glow-simple" id="glow-repartidora">
+        <img src="assets/f2026-texto-nosotras.png"  class="layer" id="glow-nosotras">
+        <!-- NIÑA Y CRÉDITOS -->
+        <img src="assets/nina-base.png"             class="layer glow-simple" id="glow-nina">
+        <img src="assets/p1971-creditos.png"        class="layer" id="img-creditos-btn">
+        <!-- EL BALÓN -->
+        <img src="assets/centro-balon-loader.png" id="balon-loader">
+
+        <!-- ZONAS CLICKEABLES — para depurar descomenta el CSS de .zona -->
+        <div class="zona" id="zona-historia"    data-target="glow-historia"   style="top:2%;  left:0%;   width:22%; height:35%;"></div>
+        <div class="zona" id="zona-jugadoras"   data-target="glow-jugadoras"  style="top:15%; left:0%;   width:38%; height:80%;"></div>
+        <div class="zona" id="zona-azteca"      data-target="glow-azteca"     style="top:2%;  left:22%;  width:18%; height:28%;"></div>
+        <div class="zona" id="zona-futbolista"  data-target="glow-futbolista" style="top:10%; left:52%;  width:15%; height:75%;"></div>
+        <div class="zona" id="zona-doctora"     data-target="glow-doctora"    style="top:2%;  left:63%;  width:14%; height:65%;"></div>
+        <div class="zona" id="zona-ingeniera"   data-target="glow-ingeniera"  style="top:2%;  left:75%;  width:12%; height:60%;"></div>
+        <div class="zona" id="zona-maestra"     data-target="glow-maestra"    style="top:40%; left:57%;  width:14%; height:55%;"></div>
+        <div class="zona" id="zona-bombera"     data-target="glow-bombera"    style="top:45%; left:68%;  width:13%; height:50%;"></div>
+        <div class="zona" id="zona-repartidora" data-target="glow-repartidora"style="top:25%; left:80%;  width:11%; height:70%;"></div>
+        <div class="zona" id="zona-nosotras"    data-target="glow-nosotras"   style="top:2%;  left:86%;  width:14%; height:35%;"></div>
+        <div class="zona" id="zona-nina"        data-target="glow-nina"       style="top:20%; left:88%;  width:12%; height:78%;"></div>
+        <div class="zona" id="zona-creditos"    data-target="img-creditos-btn"style="top:78%; left:0%;   width:8%;  height:22%;"></div>
+
+        <!-- MODAL CRÉDITOS -->
+        <div id="modal-creditos" class="modal">
+            <img src="assets/p1971-creditos-1.png" id="img-creditos-panel">
+            <button id="cerrar-creditos">CERRAR</button>
+        </div>
+
+        <!-- MODAL MULTIMEDIA -->
+        <div id="modal-media" class="modal">
+            <div id="media-contenido"></div>
+            <button id="cerrar-media">CERRAR</button>
+        </div>
+
+        <!-- OVERLAY NIÑA (oscurece mural excepto personajes clave) -->
+        <div id="nina-overlay"></div>
+        <button id="cerrar-nina">CERRAR</button>
+        <!-- OVERLAY GIRA TU CELULAR -->
+        <div id="rotate-overlay">
+            <div id="rotate-contenido">
+                <div id="rotate-icono">📱</div>
+                <p id="rotate-texto">Gira tu dispositivo<br>para ver el mural</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
