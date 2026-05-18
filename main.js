@@ -1042,8 +1042,17 @@ function efectoAstronauta(vfx) {
         vfx.innerHTML='';
     }};
 }
+    });
+
+
+
+
 
 function efectoDoctora(vfx) {
+   // ── CAPAS AL FRENTE ─────────────────────────────────────────
+    const elDoctora = document.getElementById('glow-doctora');
+    if(elDoctora){elDoctora.style.zIndex='62';elDoctora.style.position='absolute';}
+  
     const cont=document.createElement('div');
     cont.style.cssText='position:absolute;inset:0;overflow:hidden;background-image:linear-gradient(rgba(255,0,0,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,0,0,.07) 1px,transparent 1px);background-size:50px 50px;';
     vfx.appendChild(cont);
