@@ -31,16 +31,124 @@ body {
 }
 
 /* ============================================
-   ZONAS CLICKEABLES
+   ZONAS CLICKEABLES — CONTORNOS NEÓN
    ============================================ */
+
+/* ── BASE (aplica a todas) ────────────────── */
 .zona {
     position: absolute;
     cursor: pointer;
     z-index: 50;
     border-radius: 4px;
-    transition: filter 0.2s ease;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+
+    /* Contorno doble: capa exterior ancha (color neón) + capa interior delgada (blanco) */
+    outline: var(--zona-outer, 3px) solid var(--zona-color, transparent);
+    outline-offset: 0px;
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.55),   /* línea interior blanca */
+        0 0 var(--zona-blur,  8px) var(--zona-color, transparent),
+        0 0 var(--zona-blur2, 18px) var(--zona-color, transparent);
+
+    transition:
+        background 0.18s ease,
+        box-shadow 0.18s ease;
+    background: transparent;
+}
+
+/* ── HOVER: solo relleno blanco al 50%, sin glow ─ */
+.zona:hover,
+.zona:active {
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.55);   /* mantiene solo el borde interior */
+    outline-color: transparent;
+}
+
+/* ══════════════════════════════════════════════
+   COLOR NEÓN POR ZONA  —  edita aquí
+   Variables:
+     --zona-color   color del neón
+     --zona-outer   grosor del outline exterior
+     --zona-blur    radio del glow 1 (cercano)
+     --zona-blur2   radio del glow 2 (halo externo)
+   ══════════════════════════════════════════════ */
+
+/* CUADRANTE 1 — PIONERAS 1971 */
+#zona-historia {
+    --zona-color: rgb(176, 0, 255);   /* morado */
+    --zona-outer: 2px;
+    --zona-blur:  8px;
+    --zona-blur2: 20px;
+}
+#zona-jugadoras {
+    --zona-color: rgb(176, 0, 255);   /* morado */
+    --zona-outer: 2px;
+    --zona-blur:  9px;
+    --zona-blur2: 22px;
+}
+#zona-azteca {
+    --zona-color: rgb(176, 0, 255);   /* morado */
+    --zona-outer: 2px;
+    --zona-blur:  8px;
+    --zona-blur2: 20px;
+}
+#zona-creditos {
+    --zona-color: rgb(176, 0, 255);   /* morado */
+    --zona-outer: 2px;
+    --zona-blur:  7px;
+    --zona-blur2: 16px;
+}
+
+/* CUADRANTE 2 — PROFESIONISTAS 2026 */
+#zona-futbolista {
+    --zona-color: rgb(0, 255, 60);    /* verde */
+    --zona-outer: 2px;
+    --zona-blur:  8px;
+    --zona-blur2: 20px;
+}
+#zona-doctora {
+    --zona-color: rgb(255, 255, 0);   /* amarillo */
+    --zona-outer: 2px;
+    --zona-blur:  8px;
+    --zona-blur2: 20px;
+}
+#zona-ingeniera {
+    --zona-color: rgb(0, 220, 255);   /* cyan */
+    --zona-outer: 2px;
+    --zona-blur:  8px;
+    --zona-blur2: 20px;
+}
+#zona-maestra {
+    --zona-color: rgb(255, 60, 60);   /* rojo */
+    --zona-outer: 2px;
+    --zona-blur:  8px;
+    --zona-blur2: 20px;
+}
+#zona-bombera {
+    --zona-color: rgb(0, 220, 255);   /* cyan */
+    --zona-outer: 2px;
+    --zona-blur:  8px;
+    --zona-blur2: 20px;
+}
+#zona-repartidora {
+    --zona-color: rgb(176, 0, 255);   /* morado */
+    --zona-outer: 2px;
+    --zona-blur:  8px;
+    --zona-blur2: 20px;
+}
+#zona-nosotras {
+    --zona-color: rgb(255, 136, 0);   /* naranja */
+    --zona-outer: 2px;
+    --zona-blur:  8px;
+    --zona-blur2: 20px;
+}
+#zona-nina {
+    --zona-color: rgb(255, 80, 180);  /* rosa */
+    --zona-outer: 2px;
+    --zona-blur:  9px;
+    --zona-blur2: 22px;
 }
 
 /* ============================================
@@ -447,4 +555,3 @@ body {
 @media screen and (max-width:768px) and (orientation:portrait) {
     #corazon-frase-panel { top:15%; max-width:88%; }
 }
-
