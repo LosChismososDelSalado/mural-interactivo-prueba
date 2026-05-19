@@ -87,6 +87,20 @@ body {
 #glow-repartidora  { animation-delay: -7.2s; }
 #glow-nosotras     { animation-delay: -1.8s; }
 #glow-nina         { animation-delay: -6.5s; }
+
+/* ============================================
+   4. INTERACCIÓN AL HOVER (NÚCLEO BLANCO SOBRE NEÓN)
+   ============================================ */
+.elemento-hover {
+    /* Pausa la respiración y muestra el destello blanco con el neón propio */
+    animation-play-state: paused !important;
+    filter: brightness(1.1)
+            drop-shadow(0 0 calc(var(--neon-thickness) * 0.5) var(--neon-color))
+            drop-shadow(0 0 12px #ffffff)
+            drop-shadow(0 0 28px #ffffff) !important;
+    transition: filter 0.22s ease;
+}
+
 /* ============================================
    BALÓN
    ============================================ */
