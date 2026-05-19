@@ -44,11 +44,11 @@ body {
 }
 
 /* ============================================
-   HOVER — pausa + brillo blanco limpio EN EL BORDE
+   HOVER — pausa + brillo blanco limpio
    ============================================ */
 .elemento-hover {
     animation-play-state: paused !important;
-    filter: drop-shadow(0 0 8px #ffffff) !important; /* Eliminado brightness */
+    filter: brightness(1.5) drop-shadow(0 0 4px #fff8) !important;
     transition: filter 0.18s ease;
 }
 
