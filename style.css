@@ -43,13 +43,16 @@ body {
     touch-action: manipulation;
 }
 
-/* ============================================
-   HOVER — pausa + brillo blanco limpio
-   ============================================ */
-.elemento-hover {
+/* HOVER GRUPO 1971 (Jugadoras, Texto e Historial) — COLOR BLANCO NÚCLEO */
+#glow-jugadoras.elemento-hover,
+#glow-historia.elemento-hover,
+#img-creditos-btn.elemento-hover {
     animation-play-state: paused !important;
-    filter: brightness(1.5) drop-shadow(0 0 4px #fff8) !important;
-    transition: filter 0.18s ease;
+    filter: brightness(1.2) 
+            drop-shadow(0 0 calc(var(--neon-thickness) * 0.5) var(--neon-color))
+            drop-shadow(0 0 14px #ffffff) 
+            drop-shadow(0 0 30px #ffffff) !important;
+    transition: filter 0.2s ease;
 }
 
 /* ============================================
