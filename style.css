@@ -44,27 +44,25 @@ body {
 }
 
 /* ============================================
-   HOVER — pausa + brillo blanco limpio
+   HOVER — pausa + brillo blanco limpio EN EL BORDE
    ============================================ */
 .elemento-hover {
     animation-play-state: paused !important;
-    filter: brightness(1.5) drop-shadow(0 0 4px #fff8) !important;
+    filter: drop-shadow(0 0 8px #ffffff) !important; /* Eliminado brightness */
     transition: filter 0.18s ease;
 }
 
 /* ============================================
-   ANIMACIÓN MAESTRA — opción A
-   hue-rotate sobre un solo drop-shadow
-   1 filtro GPU en vez de 7, ligero en móvil
+   ANIMACIÓN MAESTRA — 4 COLORES EXCLUSIVOS EN CONTORNO
    ============================================ */
 @keyframes arcoiris-hue {
-    0%   { filter: hue-rotate(0deg)  drop-shadow(0 0 6px #ff0055);  } /* Color 1: Rosa */
-    25%  { filter: hue-rotate(90deg) drop-shadow(0 0 8px #0055ff);  } /* Color 2: Azul */
-    50%  { filter: hue-rotate(180deg) drop-shadow(0 0 6px #00ff55);  } /* Color 3: Verde */
-    75%  { filter: hue-rotate(270deg) drop-shadow(0 0 8px #ffcc00); } /* Color 4: Amarillo */
-    100% { filter: hue-rotate(360deg) drop-shadow(0 0 6px #ff0055); 
-            }
+    0%   { filter: drop-shadow(0 0 6px #ff0055); } /* Color 1: Rosa */
+    25%  { filter: drop-shadow(0 0 8px #0055ff); } /* Color 2: Azul */
+    50%  { filter: drop-shadow(0 0 6px #00ff55); } /* Color 3: Verde */
+    75%  { filter: drop-shadow(0 0 8px #ffcc00); } /* Color 4: Amarillo */
+    100% { filter: drop-shadow(0 0 6px #ff0055); } /* Retorno al Rosa */
 }
+
 
 /* Asignación a todos los elementos */
 #glow-historia, #glow-azteca, #glow-jugadoras, #img-creditos-btn,
