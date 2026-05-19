@@ -59,11 +59,11 @@ body {
    ANIMACIÓN MAESTRA — 4 COLORES EXCLUSIVOS EN CONTORNO
    ============================================ */
 @keyframes arcoiris-hue {
-    0%   { filter: drop-shadow(0 0 6px #ff0055); } /* Color 1: Rosa */
-    25%  { filter: drop-shadow(0 0 8px #0055ff); } /* Color 2: Azul */
-    50%  { filter: drop-shadow(0 0 6px #00ff55); } /* Color 3: Verde */
-    75%  { filter: drop-shadow(0 0 8px #ffcc00); } /* Color 4: Amarillo */
-    100% { filter: drop-shadow(0 0 6px #ff0055); } /* Retorno al Rosa */
+    0%   { filter: drop-shadow(0 0 6px #f200ff); }
+    25%  { filter: drop-shadow(0 0 8px #03ff13); }
+    50%  { filter: drop-shadow(0 0 6px #faf61e); }
+    75%  { filter: drop-shadow(0 0 8px #82fffb); }
+    100% { filter: drop-shadow(0 0 6px #fca4b9); } 
 }
 
 
